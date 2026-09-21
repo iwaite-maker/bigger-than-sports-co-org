@@ -580,6 +580,10 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   transform: scale(1.4);
   transform-origin: center bottom;
 }
+.testimonial-card.shift-photo-cj img{
+  transform: scale(1.1);
+  transform-origin: center bottom;
+}
 .testimonial-overlay{
   position: absolute;
   left: 0;
