@@ -365,19 +365,23 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .program-col{
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.15);
+  border-top: 3px solid var(--orange);
   border-radius: 10px;
-  padding: 28px;
+  padding: 30px 28px 28px;
   display: flex;
   flex-direction: column;
 }
 .program-col h3{
-  font-size: 1.35rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
   color: var(--orange);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
-.program-col p{ font-size: 0.98rem; color: var(--cream); flex-grow: 1; }
+.program-col p{ font-size: 1.05rem; line-height: 1.65; color: var(--cream); flex-grow: 1; }
 .program-col img{
-  margin-top: 20px;
+  margin-top: 24px;
   border-radius: 8px;
   width: 100%;
   aspect-ratio: 4/3;
