@@ -570,8 +570,8 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   transition: transform .3s ease;
 }
 .testimonial-card.shift-photo img{
-  transform: scale(1.16);
-  transform-origin: center 12%;
+  transform: scale(1.4);
+  transform-origin: center bottom;
 }
 .testimonial-overlay{
   position: absolute;
@@ -588,9 +588,11 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   color: var(--cream);
 }
 .testimonial-overlay .name{ font-weight: 700; color: var(--white); letter-spacing: 0.02em; font-size: 0.85rem; }
-.testimonial-overlay .context{ font-weight: 500; color: var(--cream); font-style: italic; font-size: 0.72rem; opacity: 0.8; margin-top: 3px; }
 @media (max-width: 560px){
   .testimonial-card{ flex-basis: 85vw; }
+  .testimonial-overlay{ padding: 16px 16px 12px; }
+  .testimonial-overlay blockquote{ font-size: 0.7rem; line-height: 1.28; margin-bottom: 5px; }
+  .testimonial-overlay .name{ font-size: 0.78rem; }
 }
 .testimonials-arrow{
   flex: 0 0 auto;
