@@ -757,3 +757,68 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   margin-top: 10px;
   letter-spacing: normal;
 }
+
+/* ---------- Give With Confidence ---------- */
+.confidence-inner{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.confidence-media img{ width: 100%; height: auto; }
+.confidence-eyebrow{
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  color: var(--orange-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.confidence-headline{
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--green-dark);
+  margin-bottom: 18px;
+}
+.confidence-body{
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+  font-size: 1.05rem;
+  color: var(--green-dark);
+  max-width: 520px;
+  margin-bottom: 10px;
+  letter-spacing: normal;
+}
+.confidence-link{
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 26px;
+}
+.confidence-link:hover{ color: var(--orange-dark); }
+.confidence-donate-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-transform: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: normal;
+  transition: background .15s, transform .15s;
+}
+.confidence-donate-btn:hover{ background: var(--orange-dark); transform: translateY(-2px); }
+@media (max-width: 800px){
+  .confidence-inner{ grid-template-columns: 1fr; text-align: center; }
+  .confidence-media{ max-width: 220px; margin: 0 auto; }
+  .confidence-body{ margin-left: auto; margin-right: auto; }
+}
