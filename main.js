@@ -51,4 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (prevEvt) prevEvt.addEventListener('click', function () { scrollEvents(-1); });
     if (nextEvt) nextEvt.addEventListener('click', function () { scrollEvents(1); });
   }
+
+  // ---- News & Stories horizontal scroll strip ----
+  var newsScroll = document.querySelector('.news-scroll');
+  if (newsScroll) {
+    var prevNews = document.querySelector('.news-arrow.prev');
+    var nextNews = document.querySelector('.news-arrow.next');
+    var scrollNews = function (dir) {
+      var card = newsScroll.querySelector('.news-card');
+      var amount = card ? card.getBoundingClientRect().width + 24 : 300;
+      newsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+    };
+    if (prevNews) prevNews.addEventListener('click', function () { scrollNews(-1); });
+    if (nextNews) nextNews.addEventListener('click', function () { scrollNews(1); });
+  }
 });
