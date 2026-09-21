@@ -776,20 +776,20 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.9rem;
-  color: var(--orange-dark);
+  color: var(--orange);
   font-weight: 600;
   margin-bottom: 8px;
 }
 .confidence-headline{
   font-size: clamp(2rem, 4.5vw, 3rem);
-  color: var(--green-dark);
+  color: var(--white);
   margin-bottom: 18px;
 }
 .confidence-body{
   font-family: 'Poppins', sans-serif;
   text-transform: none;
   font-size: 1.05rem;
-  color: var(--green-dark);
+  color: var(--cream);
   max-width: 520px;
   margin-bottom: 10px;
   letter-spacing: normal;
@@ -798,12 +798,12 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   display: block;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: var(--green-dark);
+  color: var(--cream);
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-bottom: 26px;
 }
-.confidence-link:hover{ color: var(--orange-dark); }
+.confidence-link:hover{ color: var(--orange); }
 .confidence-donate-btn{
   display: inline-flex;
   align-items: center;
