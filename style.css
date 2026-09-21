@@ -450,6 +450,13 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
+  overflow: hidden;
+}
+.avatar-badge img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .carousel-slide blockquote{ margin: 0 auto 16px; }
 .carousel-slide .name{ font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.95rem; }
