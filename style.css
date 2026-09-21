@@ -670,6 +670,54 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 @media (max-width: 700px){
   .events-arrow{ display: none; }
 }
+
+/* ---------- News & Stories horizontal scroll strip ---------- */
+.news-scroll-wrap{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1200px;
+  margin: 20px auto 0;
+}
+.news-scroll{
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 22px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) rgba(255,255,255,0.08);
+}
+.news-scroll::-webkit-scrollbar{ height: 8px; }
+.news-scroll::-webkit-scrollbar-track{ background: rgba(255,255,255,0.08); border-radius: 4px; }
+.news-scroll::-webkit-scrollbar-thumb{ background: var(--orange); border-radius: 4px; }
+.news-scroll .news-card{
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+@media (max-width: 560px){
+  .news-scroll .news-card{ flex-basis: 78vw; }
+}
+.news-arrow{
+  flex: 0 0 auto;
+  background: transparent;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.news-arrow:hover{ background: var(--orange); color: var(--black); }
+@media (max-width: 700px){
+  .news-arrow{ display: none; }
+}
 .badge-upcoming{
   display: inline-block;
   background: var(--orange);
