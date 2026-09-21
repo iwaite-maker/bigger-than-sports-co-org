@@ -24,42 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---- Testimonials carousel ----
-  var track = document.querySelector('.carousel-slides');
-  if (track) {
-    var slides = track.querySelectorAll('.carousel-slide');
-    var dotsWrap = document.querySelector('.carousel-dots');
-    var index = 0;
-    var total = slides.length;
-
-    slides.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-      dot.addEventListener('click', function () { goTo(i); });
-      dotsWrap.appendChild(dot);
-    });
-
-    function update() {
-      track.style.transform = 'translateX(-' + (index * 100) + '%)';
-      dotsWrap.querySelectorAll('.carousel-dot').forEach(function (d, i) {
-        d.classList.toggle('active', i === index);
-      });
-    }
-    function goTo(i) {
-      index = (i + total) % total;
-      update();
-    }
-
-    var prevBtn = document.querySelector('.carousel-arrow.prev');
-    var nextBtn = document.querySelector('.carousel-arrow.next');
-    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
-
-    var autoplay = setInterval(function () { goTo(index + 1); }, 6000);
-    document.querySelector('.carousel').addEventListener('mouseenter', function () {
-      clearInterval(autoplay);
-    });
+  // ---- Testimonials horizontal scroll strip ----
+  var testimonialsScroll = document.querySelector('.testimonials-scroll');
+  if (testimonialsScroll) {
+    var prevTest = document.querySelector('.testimonials-arrow.prev');
+    var nextTest = document.querySelector('.testimonials-arrow.next');
+    var scrollTestimonials = function (dir) {
+      var card = testimonialsScroll.querySelector('.testimonial-card');
+      var amount = card ? card.getBoundingClientRect().width + 24 : 420;
+      testimonialsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+    };
+    if (prevTest) prevTest.addEventListener('click', function () { scrollTestimonials(-1); });
+    if (nextTest) nextTest.addEventListener('click', function () { scrollTestimonials(1); });
   }
 
   // ---- Events horizontal scroll strip ----
