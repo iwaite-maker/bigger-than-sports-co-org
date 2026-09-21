@@ -496,6 +496,68 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 .events-subhead:first-of-type{ margin-top: 40px; }
 
+/* ---------- Events horizontal scroll strip ---------- */
+.events-scroll-wrap{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+.events-scroll{
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 22px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) rgba(255,255,255,0.08);
+}
+.events-scroll::-webkit-scrollbar{ height: 8px; }
+.events-scroll::-webkit-scrollbar-track{ background: rgba(255,255,255,0.08); border-radius: 4px; }
+.events-scroll::-webkit-scrollbar-thumb{ background: var(--orange); border-radius: 4px; }
+.events-scroll .event-card{
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+@media (max-width: 560px){
+  .events-scroll .event-card{ flex-basis: 78vw; }
+}
+.events-arrow{
+  flex: 0 0 auto;
+  background: transparent;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.events-arrow:hover{ background: var(--orange); color: var(--black); }
+@media (max-width: 700px){
+  .events-arrow{ display: none; }
+}
+.badge-upcoming{
+  display: inline-block;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+
 /* ---------- Get Involved image buttons ---------- */
 .involve-grid{
   display: grid;
