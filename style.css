@@ -222,7 +222,7 @@ section{ padding: 80px 24px; }
   aspect-ratio: 16/10;
   object-fit: cover;
 }
-.event-card h3, .news-card h3{ font-family: 'Poppins', sans-serif; text-transform: none; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+.event-card h3, .news-card h3{ font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: 1.15rem; margin-bottom: 8px; }
 .event-card .date, .news-card .date{ color: var(--orange); font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; display: block; }
 .event-card a.link, .news-card a.link{ color: var(--orange); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
 
