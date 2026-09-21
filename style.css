@@ -763,7 +763,26 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 
 /* ---------- Give With Confidence ---------- */
+.confidence-section{
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+}
+.confidence-bg{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.confidence-bg::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17,17,17,0.78), rgba(51,67,43,0.85));
+}
 .confidence-inner{
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 60px;
