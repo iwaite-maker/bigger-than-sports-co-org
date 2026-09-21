@@ -61,4 +61,18 @@ document.addEventListener('DOMContentLoaded', function () {
       clearInterval(autoplay);
     });
   }
+
+  // ---- Events horizontal scroll strip ----
+  var eventsScroll = document.querySelector('.events-scroll');
+  if (eventsScroll) {
+    var prevEvt = document.querySelector('.events-arrow.prev');
+    var nextEvt = document.querySelector('.events-arrow.next');
+    var scrollEvents = function (dir) {
+      var card = eventsScroll.querySelector('.event-card');
+      var amount = card ? card.getBoundingClientRect().width + 24 : 300;
+      eventsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+    };
+    if (prevEvt) prevEvt.addEventListener('click', function () { scrollEvents(-1); });
+    if (nextEvt) nextEvt.addEventListener('click', function () { scrollEvents(1); });
+  }
 });
