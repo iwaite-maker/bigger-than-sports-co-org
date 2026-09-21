@@ -389,38 +389,84 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   object-fit: cover;
 }
 
-/* ---------- Timeline ("What a Year Looks Like") ---------- */
-.timeline{
+/* ---------- Journey Timeline ("What a Program Looks Like") ---------- */
+.journey-timeline{
   position: relative;
-  max-width: 900px;
-  margin: 50px auto 0;
-  padding-left: 34px;
-  border-left: 3px solid var(--orange);
+  max-width: 1100px;
+  margin: 60px auto 0;
 }
-.timeline-item{ position: relative; padding-bottom: 40px; }
-.timeline-item:last-child{ padding-bottom: 0; }
-.timeline-item::before{
+.journey-timeline::before{
   content: "";
   position: absolute;
-  left: -43px;
-  top: 4px;
-  width: 18px;
-  height: 18px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--orange);
+  transform: translateX(-50%);
+}
+.journey-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+.journey-item:last-child{ margin-bottom: 0; }
+.journey-item:nth-child(even){ flex-direction: row-reverse; }
+.journey-item::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--orange);
   border: 3px solid var(--green-dark);
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
-.timeline-item h4{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  text-transform: none;
-  font-size: 1.15rem;
+.journey-media{ flex: 1 1 0; position: relative; z-index: 1; }
+.journey-media img{
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+  display: block;
+}
+.journey-content{ flex: 1 1 0; position: relative; z-index: 1; }
+.journey-item:nth-child(even) .journey-content{ text-align: right; }
+.journey-step{
+  display: block;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  color: var(--orange);
+  line-height: 1;
+  opacity: 0.9;
+}
+.journey-content h4{
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
   color: var(--white);
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 14px;
 }
-.timeline-item p{ color: var(--cream); font-size: 0.98rem; margin: 0; }
-.timeline-wide-img{ margin-top: 50px; max-width: 1100px; margin-left: auto; margin-right: auto; }
-.timeline-wide-img img{ width: 100%; border-radius: 10px; aspect-ratio: 16/7; object-fit: cover; }
+.journey-content p{ color: var(--cream); font-size: 1rem; margin: 0; }
+@media (max-width: 900px){
+  .journey-timeline::before{ left: 18px; }
+  .journey-item{
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 18px;
+    padding-left: 50px;
+    margin-bottom: 50px;
+  }
+  .journey-content, .journey-item:nth-child(even) .journey-content{ text-align: left; }
+  .journey-item::after{ left: 18px; top: 8px; transform: translate(-50%, 0); }
+  .journey-media img{ aspect-ratio: 16/9; }
+}
+
 
 /* ---------- Testimonials Carousel ---------- */
 .carousel{
