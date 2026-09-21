@@ -342,7 +342,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
     color: var(--white);
     font-size: clamp(1.3rem, 3.2vw, 2rem);
     line-height: 1.25;
-    margin-top: 26px;
+    margin-top: 40px;
 }
 .zeffy-embed-card{
     background: var(--white);
