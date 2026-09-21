@@ -270,17 +270,18 @@ section{ padding: 80px 24px; }
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  opacity: 0.05;
   pointer-events: none;
   user-select: none;
 }
 .espy-watermark-row{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: 5rem;
   white-space: nowrap;
-  color: var(--white);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.14);
 }
+.espy-watermark-row:nth-child(even){ transform: translateX(-2.5rem); }
 .espy-inner{
   position: relative;
   z-index: 1;
@@ -310,12 +311,16 @@ section{ padding: 80px 24px; }
   color: var(--cream);
   max-width: 480px;
 }
-.espy-media img{
+.espy-media img{ 
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
   display: block;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  margin: 0 auto;
+}
+@media (max-width: 800px){
+  .espy-media img{ max-height: 340px; }
 }
 
 .trust-seal{ max-width: 160px; margin: 24px auto 0; }
