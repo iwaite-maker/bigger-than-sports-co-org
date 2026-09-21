@@ -427,7 +427,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   gap: 28px;
   max-width: 1050px;
   margin: 40px auto 0;
-  align-items: start;
+  align-items: stretch;
 }
 @media (max-width: 900px){ .program-cols{ grid-template-columns: 1fr; } }
 .program-col{
@@ -447,9 +447,9 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   color: var(--orange);
   margin-bottom: 10px;
 }
-.program-col p{ font-size: 0.92rem; line-height: 1.55; color: var(--cream); }
+.program-col p{ font-size: 0.92rem; line-height: 1.55; color: var(--cream); margin-bottom: 16px; }
 .program-col img{
-  margin-top: 16px;
+  margin-top: auto;
   border-radius: 6px;
   width: 100%;
   aspect-ratio: 16/10;
