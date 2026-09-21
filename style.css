@@ -334,11 +334,23 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   letter-spacing: normal;
 }
 .donation-widget{
-  margin-top: 20px;
-  display: inline-flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-top: 20px;
+}
+.donation-widget .widget-tagline{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: clamp(1.3rem, 3.2vw, 2rem);
+    line-height: 1.25;
+    margin-bottom: 26px;
+}
+.zeffy-embed-card{
+    background: var(--white);
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.28);
 }
 
 /* ---------- Three-column Education Program layout ---------- */
