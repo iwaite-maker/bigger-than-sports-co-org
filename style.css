@@ -555,7 +555,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   align-items: center;
   gap: 14px;
   max-width: 1200px;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
 }
 .events-scroll{
   flex: 1 1 auto;
