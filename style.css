@@ -336,7 +336,7 @@ blockquote{
 blockquote cite{ display: block; margin-top: 14px; font-size: 0.95rem; opacity: 0.7; }
 
 /* ---------- Contact form embed ---------- */
-.tally-embed{ width: 100%; border: none; min-height: 500px; }
+.form-embed{ width: 100%; border: none; min-height: 539px; }
 
 /* ---------- Footer ---------- */
 footer.site-footer{
