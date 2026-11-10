@@ -267,7 +267,7 @@ section{ padding: 80px 24px; }
   overflow: hidden;
   background: var(--black);
   color: var(--white);
-  padding: 48px 24px;
+  padding: 32px 24px;
 }
 .espy-watermark{
   position: absolute;
@@ -323,7 +323,7 @@ section{ padding: 80px 24px; }
 .espy-media img{
   width: 100%;
   height: auto;
-  max-height: 380px;
+  max-height: 314px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -331,7 +331,7 @@ section{ padding: 80px 24px; }
   mask-image: radial-gradient(ellipse 92% 94% at 50% 46%, black 62%, black 82%, transparent 100%);
 }
 @media (max-width: 800px){
-  .espy-media img{ max-height: 280px; }
+  .espy-media img{ max-height: 232px; }
 }
 
 .trust-seal{ max-width: 160px; margin: 24px auto 0; }
