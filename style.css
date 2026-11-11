@@ -178,7 +178,7 @@ section:not(.hero)::before{
 }
 
 .section-green{ background: linear-gradient(180deg, var(--green) 0%, var(--green) 92%, rgba(0,0,0,0.07) 100%); color: var(--white); }
-.section-dark{ background: linear-gradient(180deg, rgba(0,0,0,0.07) 0%, var(--green-dark) 10%, var(--green-dark) 90%, rgba(0,0,0,0.07) 100%); color: var(--white); }
+.section-dark{ background: linear-gradient(180deg, var(--green-dark) 0%, var(--green-dark) 90%, rgba(0,0,0,0.07) 100%); color: var(--white); }
 .section-black{ background: var(--black); color: var(--white); }
 .section-cream{ background: var(--cream); color: var(--green-dark); }
 .section-white{ background: var(--white); color: var(--green-dark); }
