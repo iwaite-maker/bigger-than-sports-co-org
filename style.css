@@ -129,7 +129,7 @@ img{ max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center top;
+  background-position: center;
 }
 .hero-bg::after{
   content: "";
@@ -440,6 +440,9 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   inset: 0;
   background-size: cover;
   background-position: center;
+}
+#mission .overlay-bg{
+  background-position: center 82%;
 }
 .overlay-section .overlay-bg::after{
   content: "";
