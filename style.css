@@ -177,7 +177,7 @@ section:not(.hero)::before{
   z-index: 5;
 }
 
-.section-green{ background: linear-gradient(180deg, var(--green) 0%, var(--green) 92%, rgba(0,0,0,0.07) 100%); color: var(--white); }
+.section-green{ background: var(--green); color: var(--white); }
 .section-dark{ background: var(--green-dark); color: var(--white); }
 .section-black{ background: var(--black); color: var(--white); }
 .section-cream{ background: var(--cream); color: var(--green-dark); }
