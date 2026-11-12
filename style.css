@@ -317,25 +317,15 @@ section:not(.hero)::before{
 .espy-section{
   position: relative;
   overflow: hidden;
-  background: var(--black);
+  background-color: #191819;
+  background-image: url('espy-award-photo.png?v=20261112a');
+  background-size: cover;
+  background-position: right center;
   color: var(--white);
   padding: 48px 24px;
   min-height: 520px;
   display: flex;
   align-items: center;
-}
-.espy-media{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 58%;
-  z-index: 0;
-  background-image: url('espy-award-photo.png?v=20261111a');
-  background-size: cover;
-  background-position: center 18%;
-  -webkit-mask-image: linear-gradient(to left, black 50%, transparent 100%);
-  mask-image: linear-gradient(to left, black 50%, transparent 100%);
 }
 .espy-inner{
   position: relative;
@@ -345,18 +335,25 @@ section:not(.hero)::before{
   margin: 0 auto;
 }
 .espy-content{ max-width: 520px; }
+.espy-media{ display: none; }
 @media (max-width: 800px){
-  .espy-section{ min-height: 0; display: block; }
-  .espy-media{
-    position: relative;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 24px;
-    background-position: center 12%;
-    -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
-    mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  .espy-section{
+    min-height: 0;
+    display: block;
+    background-image: none;
+    background-color: #191819;
   }
   .espy-content{ max-width: none; }
+  .espy-media{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-bottom: 24px;
+    background-image: url('espy-mobile.png?v=20261112a');
+    background-size: cover;
+    background-position: center 15%;
+  }
 }
 .espy-eyebrow{
   text-transform: uppercase;
