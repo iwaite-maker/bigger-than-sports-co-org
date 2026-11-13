@@ -432,7 +432,14 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   background-position: center;
 }
 #mission .overlay-bg{
-  background-position: center 82%;
+  background-size: 120% auto;
+  background-position: center 90%;
+}
+@media (max-width: 900px){
+  #mission .overlay-bg{
+    background-size: cover;
+    background-position: center 82%;
+  }
 }
 .overlay-section .overlay-bg::after{
   content: "";
