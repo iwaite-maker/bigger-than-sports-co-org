@@ -83,7 +83,7 @@ img{ max-width: 100%; display: block; }
 }
 .dropdown-menu a:hover{ background: rgba(255,255,255,0.08); }
 .donate-btn{
-  background: var(--black);
+  background: var(--green);
   color: var(--white);
   font-weight: 700;
   padding: 12px 26px;
