@@ -278,7 +278,7 @@ section:not(.hero)::before{
 }
 .card img{ border-radius: 6px; margin-bottom: 14px; aspect-ratio: 4/5; object-fit: cover; }
 .card h3{ font-size: 1.05rem; margin-bottom: 4px; font-weight: 700; }
-.card .role{ font-weight: 600; margin-top: 2px; padding-top: 0; font-family: 'Montserrat',sans-serif; text-transform: none; font-size: 0.85rem; color: var(--orange-dark); }
+.card .role{ font-weight: 600; margin-top: 2px; padding-top: 0; font-family: 'Montserrat',sans-serif; text-transform: none; font-size: 0.85rem; color: var(--black); opacity: 0.6; }
 .card .email{ font-size: 0.75rem; opacity: 0.8; word-break: break-word; margin-top: 6px; }
 
 .event-card, .news-card{
