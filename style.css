@@ -784,6 +784,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 #news{ padding-top: 24px; padding-bottom: 20px; }
 #news .section-title{ margin-bottom: 8px; }
 #news .news-scroll-wrap{ margin-top: 6px; }
+#news p.center{ margin-top: 6px; margin-bottom: 16px; }
 .news-scroll-wrap{
   display: flex;
   align-items: center;
