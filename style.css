@@ -203,7 +203,7 @@ section:not(.hero)::before{
 .board-list li{
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
   padding: 12px 6px;
   border-bottom: 1px solid rgba(20,62,34,0.15);
@@ -224,6 +224,20 @@ section:not(.hero)::before{
   letter-spacing: 0.04em;
   color: var(--black);
   opacity: 0.6;
+}
+.board-name-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.board-position{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--black);
+  opacity: 0.55;
+  text-transform: none;
+  letter-spacing: 0;
 }
 .section-body{ max-width: 760px; margin: 0 auto; text-align: center; font-size: 1.05rem; }
 .section-body + .section-body{ margin-top: 20px; }
