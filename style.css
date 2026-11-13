@@ -780,6 +780,9 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 
 /* ---------- News & Stories horizontal scroll strip ---------- */
+#news{ padding-top: 50px; padding-bottom: 40px; }
+#news .section-title{ margin-bottom: 14px; }
+#news .news-scroll-wrap{ margin-top: 10px; }
 .news-scroll-wrap{
   display: flex;
   align-items: center;
