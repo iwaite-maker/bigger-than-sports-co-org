@@ -65,4 +65,48 @@ document.addEventListener('DOMContentLoaded', function () {
     if (prevNews) prevNews.addEventListener('click', function () { scrollNews(-1); });
     if (nextNews) nextNews.addEventListener('click', function () { scrollNews(1); });
   }
+
+  // ---- Journey timeline: scroll-driven progress line + staggered reveal ----
+  var journeyTimeline = document.querySelector('.journey-timeline');
+  if (journeyTimeline) {
+    var journeyItems = journeyTimeline.querySelectorAll('.journey-item');
+    var progressLine = journeyTimeline.querySelector('.journey-progress-line');
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      journeyItems.forEach(function (item) {
+        item.classList.add('journey-hidden');
+      });
+      var journeyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('journey-hidden');
+            journeyObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -25% 0px' });
+      journeyItems.forEach(function (item) { journeyObserver.observe(item); });
+    }
+
+    if (progressLine && !reduceMotion) {
+      var tickingJourney = false;
+      var updateJourneyProgress = function () {
+        tickingJourney = false;
+        var rect = journeyTimeline.getBoundingClientRect();
+        var triggerY = window.innerHeight * 0.75;
+        var progress = rect.height > 0 ? (triggerY - rect.top) / rect.height : 0;
+        progress = Math.min(Math.max(progress, 0), 1);
+        progressLine.style.height = (progress * 100) + '%';
+      };
+      var onJourneyScroll = function () {
+        if (!tickingJourney) {
+          tickingJourney = true;
+          window.requestAnimationFrame(updateJourneyProgress);
+        }
+      };
+      window.addEventListener('scroll', onJourneyScroll, { passive: true });
+      window.addEventListener('resize', onJourneyScroll);
+      updateJourneyProgress();
+    }
+  }
 });
