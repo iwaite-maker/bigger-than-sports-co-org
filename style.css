@@ -732,6 +732,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .events-subhead:first-of-type{ margin-top: 40px; }
 
 /* ---------- Events horizontal scroll strip ---------- */
+#events{ padding-top: 48px; padding-bottom: 40px; }
 .events-scroll-wrap{
   display: flex;
   align-items: center;
