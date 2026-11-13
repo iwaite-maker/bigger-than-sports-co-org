@@ -856,6 +856,11 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .news-img-wrap-inset{
   width: 100%;
   margin: 0 0 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.news-img-wrap-inset img{
+  object-fit: contain;
 }
 .news-hover-label{
   position: absolute;
