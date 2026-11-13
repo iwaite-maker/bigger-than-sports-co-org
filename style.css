@@ -784,8 +784,8 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 /* ---------- News & Stories horizontal scroll strip ---------- */
 #news{ padding-top: 24px; padding-bottom: 20px; }
 #news .section-title{ margin-bottom: 8px; }
-#news .news-scroll-wrap{ margin-top: 6px; }
-#news p.center{ margin-top: 6px; margin-bottom: 16px; }
+#news .news-scroll-wrap{ margin-top: 20px; }
+#news p.center{ margin-top: 0px; margin-bottom: 10px; }
 .news-scroll-wrap{
   display: flex;
   align-items: center;
@@ -852,10 +852,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   height: 100%;
   margin: 0;
   aspect-ratio: auto;
-}
-.news-img-wrap-inset{
-  width: 100%;
-  margin: 0 0 16px;
 }
 .news-hover-label{
   position: absolute;
