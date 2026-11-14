@@ -924,6 +924,11 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 
 
 /* ---------- Get Involved image buttons ---------- */
+.overlay-section.get-involved-section{ padding: 100px 24px; }
+.overlay-section.get-involved-section .overlay-bg::after{
+  background: linear-gradient(180deg, rgba(17,17,17,0.80) 0%, rgba(17,17,17,0.55) 35%, rgba(17,17,17,0.55) 65%, rgba(17,17,17,0.85) 100%);
+}
+.overlay-section.get-involved-section .overlay-content{ max-width: 1100px; }
 .involve-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
