@@ -334,7 +334,7 @@ section:not(.hero)::before{
   position: relative;
   overflow: hidden;
   background-color: #191819;
-  background-image: url('espy-award-photo.png?v=20261112a');
+  background-image: url('espy-award-photo-fullwidth.jpg?v=20261114a');
   background-size: cover;
   background-position: right center;
   color: var(--white);
