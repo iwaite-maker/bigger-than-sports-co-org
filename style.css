@@ -986,7 +986,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 /* ---------- Final CTA ---------- */
 .final-cta{
   text-align: center;
-  background: var(--green-dark);
+  background: linear-gradient(rgba(20,62,34,0.72), rgba(20,62,34,0.72)), url('final-cta-bg.jpg?v=20261114a') center/cover no-repeat;
   padding: 100px 24px;
 }
 .final-cta .tagline{
