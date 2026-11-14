@@ -334,7 +334,7 @@ section:not(.hero)::before{
   position: relative;
   overflow: hidden;
   background-color: #191819;
-  background-image: url('espy-photo-pattern-bg.jpg?v=20261114e');
+  background-image: url('espy-award-photo-fullwidth.jpg?v=20261114a');
   background-size: cover;
   background-position: right center;
   color: var(--white);
@@ -625,11 +625,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   .journey-item::after{ left: 18px; top: 8px; transform: translate(-50%, 0); }
   .journey-media img{ aspect-ratio: 16/9; }
 }
-@media (prefers-reduced-motion: reduce){
-  .journey-item{ opacity: 1 !important; transform: none !important; transition: none !important; }
-  .journey-progress-line{ height: 100% !important; transition: none !important; }
-}
-
 
 /* ---------- Testimonials horizontal scroll ---------- */
 #testimonials{ padding: 48px 24px 64px; }

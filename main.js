@@ -67,13 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ---- Journey timeline: scroll-driven progress line + staggered reveal ----
+  // Runs the same way regardless of prefers-reduced-motion: the reveal/progress
+  // effect here is a content-driven scroll indicator, not a jitter/parallax
+  // effect, so it stays on for everyone.
   var journeyTimeline = document.querySelector('.journey-timeline');
   if (journeyTimeline) {
     var journeyItems = journeyTimeline.querySelectorAll('.journey-item');
     var progressLine = journeyTimeline.querySelector('.journey-progress-line');
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (!reduceMotion && 'IntersectionObserver' in window) {
+    if ('IntersectionObserver' in window) {
       journeyItems.forEach(function (item) {
         item.classList.add('journey-hidden');
       });
@@ -88,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       journeyItems.forEach(function (item) { journeyObserver.observe(item); });
     }
 
-    if (progressLine && !reduceMotion) {
+    if (progressLine) {
       var tickingJourney = false;
       var updateJourneyProgress = function () {
         tickingJourney = false;
