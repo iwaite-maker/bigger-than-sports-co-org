@@ -1,4 +1,66 @@
+// ---- Custom smooth scroll (bypasses the OS/browser's own "Reduce Motion"
+// handling) ----
+// Safari/WebKit silently forces instant, un-animated scrolling for native
+// CSS `scroll-behavior: smooth` and native scrollBy/scrollIntoView smooth
+// calls whenever the visitor has the system "Reduce Motion" accessibility
+// setting on, overriding the page's own CSS. That makes every same-page
+// link and every carousel arrow jump instantly for those visitors instead
+// of gliding the way it does for everyone else. These two helpers animate
+// scroll position by hand, frame by frame, so the motion is identical
+// for every visitor regardless of that setting - same mechanism/reasoning
+// as the journey timeline below.
+function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+}
+function animateScrollTo(getPos, setPos, targetPos, duration) {
+  duration = duration || 600;
+  var startPos = getPos();
+  var distance = targetPos - startPos;
+  if (distance === 0) return;
+  var startTime = null;
+  function step(timestamp) {
+    if (startTime === null) startTime = timestamp;
+    var elapsed = timestamp - startTime;
+    var progress = Math.min(elapsed / duration, 1);
+    setPos(startPos + distance * easeInOutQuad(progress));
+    if (progress < 1) window.requestAnimationFrame(step);
+  }
+  window.requestAnimationFrame(step);
+}
+function smoothScrollWindowTo(targetY, duration) {
+  animateScrollTo(
+    function () { return window.pageYOffset; },
+    function (y) { window.scrollTo(0, y); },
+    targetY,
+    duration
+  );
+}
+function smoothScrollElementX(el, targetX, duration) {
+  animateScrollTo(
+    function () { return el.scrollLeft; },
+    function (x) { el.scrollLeft = x; },
+    targetX,
+    duration
+  );
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  // Hand-animate every same-page anchor jump (nav links, footer links,
+  // hero buttons, logo) instead of letting the browser's native smooth
+  // scroll handle it.
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    var hash = link.getAttribute('href');
+    if (!hash || hash.length < 2) return;
+    link.addEventListener('click', function (e) {
+      var target = document.getElementById(hash.slice(1));
+      if (!target) return;
+      e.preventDefault();
+      var targetY = target.getBoundingClientRect().top + window.pageYOffset;
+      smoothScrollWindowTo(targetY, 700);
+      if (history.pushState) history.pushState(null, '', hash);
+    });
+  });
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
   if (toggle && nav) {
@@ -32,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollTestimonials = function (dir) {
       var card = testimonialsScroll.querySelector('.testimonial-card');
       var amount = card ? card.getBoundingClientRect().width + 24 : 420;
-      testimonialsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+      smoothScrollElementX(testimonialsScroll, testimonialsScroll.scrollLeft + dir * amount, 450);
     };
     if (prevTest) prevTest.addEventListener('click', function () { scrollTestimonials(-1); });
     if (nextTest) nextTest.addEventListener('click', function () { scrollTestimonials(1); });
@@ -46,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollEvents = function (dir) {
       var card = eventsScroll.querySelector('.event-card');
       var amount = card ? card.getBoundingClientRect().width + 24 : 300;
-      eventsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+      smoothScrollElementX(eventsScroll, eventsScroll.scrollLeft + dir * amount, 450);
     };
     if (prevEvt) prevEvt.addEventListener('click', function () { scrollEvents(-1); });
     if (nextEvt) nextEvt.addEventListener('click', function () { scrollEvents(1); });
@@ -60,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollNews = function (dir) {
       var card = newsScroll.querySelector('.news-card');
       var amount = card ? card.getBoundingClientRect().width + 24 : 300;
-      newsScroll.scrollBy({ left: dir * amount, behavior: 'smooth' });
+      smoothScrollElementX(newsScroll, newsScroll.scrollLeft + dir * amount, 450);
     };
     if (prevNews) prevNews.addEventListener('click', function () { scrollNews(-1); });
     if (nextNews) nextNews.addEventListener('click', function () { scrollNews(1); });

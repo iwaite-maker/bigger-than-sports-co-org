@@ -11,7 +11,10 @@
 }
 
 *{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+/* Same-page anchor scrolling is animated by hand in main.js instead of
+   via this property, so it can't be silently overridden by a visitor's
+   OS-level "Reduce Motion" setting (Safari/WebKit does this to native
+   scroll-behavior, Chromium does not - this keeps it identical for both). */
 body{
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -637,7 +640,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   padding: 6px 4px 22px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
@@ -738,7 +740,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   padding: 6px 4px 22px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
@@ -790,7 +791,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   padding: 6px 4px 22px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
