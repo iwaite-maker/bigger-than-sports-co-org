@@ -915,12 +915,14 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 /* ---------- Final CTA ---------- */
 .final-cta{
   text-align: center;
-  min-height: clamp(380px, 39vw, 700px);
+  width: 100%;
+  aspect-ratio: 2576 / 966;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.78) 100%), url('final-cta-bg.jpg?v=20261114d') center 25%/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.78) 100%), url('final-cta-bg.jpg?v=20261115b') center/cover no-repeat;
   padding: 24px 24px;
 }
 .final-cta .tagline{
