@@ -66,49 +66,44 @@ document.addEventListener('DOMContentLoaded', function () {
     if (nextNews) nextNews.addEventListener('click', function () { scrollNews(1); });
   }
 
-  // ---- Journey timeline: scroll-driven progress line + staggered reveal ----
-  // Runs the same way regardless of prefers-reduced-motion: the reveal/progress
-  // effect here is a content-driven scroll indicator, not a jitter/parallax
-  // effect, so it stays on for everyone.
+  // ---- Journey timeline: scroll-driven progress line + item reveal ----
+  // Every piece of this (the line AND each item's photo/text) is driven
+  // directly off scroll position every frame, the same mechanism end to
+  // end, so the whole section visibly animates together as you scroll.
+  // It never checks prefers-reduced-motion: this is a content reveal, not
+  // a jitter/parallax effect, so it runs the same for everyone.
   var journeyTimeline = document.querySelector('.journey-timeline');
   if (journeyTimeline) {
     var journeyItems = journeyTimeline.querySelectorAll('.journey-item');
     var progressLine = journeyTimeline.querySelector('.journey-progress-line');
 
-    if ('IntersectionObserver' in window) {
-      journeyItems.forEach(function (item) {
-        item.classList.add('journey-hidden');
-      });
-      var journeyObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('journey-hidden');
-            journeyObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0, rootMargin: '0px 0px -25% 0px' });
-      journeyItems.forEach(function (item) { journeyObserver.observe(item); });
-    }
+    var tickingJourney = false;
+    var updateJourneyProgress = function () {
+      tickingJourney = false;
+      var rect = journeyTimeline.getBoundingClientRect();
+      var triggerY = window.innerHeight * 0.75;
+      var progress = rect.height > 0 ? (triggerY - rect.top) / rect.height : 0;
+      progress = Math.min(Math.max(progress, 0), 1);
+      if (progressLine) progressLine.style.height = (progress * 100) + '%';
 
-    if (progressLine) {
-      var tickingJourney = false;
-      var updateJourneyProgress = function () {
-        tickingJourney = false;
-        var rect = journeyTimeline.getBoundingClientRect();
-        var triggerY = window.innerHeight * 0.75;
-        var progress = rect.height > 0 ? (triggerY - rect.top) / rect.height : 0;
-        progress = Math.min(Math.max(progress, 0), 1);
-        progressLine.style.height = (progress * 100) + '%';
-      };
-      var onJourneyScroll = function () {
-        if (!tickingJourney) {
-          tickingJourney = true;
-          window.requestAnimationFrame(updateJourneyProgress);
-        }
-      };
-      window.addEventListener('scroll', onJourneyScroll, { passive: true });
-      window.addEventListener('resize', onJourneyScroll);
-      updateJourneyProgress();
-    }
+      var revealStart = window.innerHeight * 0.92;
+      var revealEnd = window.innerHeight * 0.55;
+      journeyItems.forEach(function (item) {
+        var itemRect = item.getBoundingClientRect();
+        var itemProgress = (revealStart - itemRect.top) / (revealStart - revealEnd);
+        itemProgress = Math.min(Math.max(itemProgress, 0), 1);
+        item.style.opacity = itemProgress;
+        item.style.transform = 'translateY(' + ((1 - itemProgress) * 44) + 'px)';
+      });
+    };
+    var onJourneyScroll = function () {
+      if (!tickingJourney) {
+        tickingJourney = true;
+        window.requestAnimationFrame(updateJourneyProgress);
+      }
+    };
+    window.addEventListener('scroll', onJourneyScroll, { passive: true });
+    window.addEventListener('resize', onJourneyScroll);
+    updateJourneyProgress();
   }
 });

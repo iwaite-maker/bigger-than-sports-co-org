@@ -564,11 +564,6 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   margin-bottom: 70px;
   opacity: 1;
   transform: none;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.journey-item.journey-hidden{
-  opacity: 0;
-  transform: translateY(44px);
 }
 .journey-item:last-child{ margin-bottom: 0; }
 .journey-item:nth-child(even){ flex-direction: row-reverse; }
