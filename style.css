@@ -208,7 +208,7 @@ section:not(.hero)::before{
 .section-green{ background: var(--green); color: var(--white); }
 .section-dark{ background: var(--green-dark); color: var(--white); }
 .section-black{ background: var(--black); color: var(--white); }
-.section-cream{ background: var(--cream); color: var(--green-dark); }
+.section-cream{ background: #ffffff; color: #143e22; }
 .section-white{ background: var(--white); color: var(--green-dark); }
 
 .section-title{ font-size: clamp(2.2rem, 5vw, 3.6rem); text-align: center; margin-bottom: 28px; }
@@ -218,7 +218,7 @@ section:not(.hero)::before{
   font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   letter-spacing: 1px;
   margin-bottom: 18px;
-  color: var(--green);
+  color: #143e22;
 }
 .board-list{
   list-style: none;
@@ -241,7 +241,7 @@ section:not(.hero)::before{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  color: var(--green);
+  color: #143e22;
   text-transform: none;
 }
 .board-role{
@@ -250,7 +250,7 @@ section:not(.hero)::before{
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--black);
   opacity: 0.6;
 }
 .board-name-wrap{
@@ -262,7 +262,7 @@ section:not(.hero)::before{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.78rem;
-  color: #ffffff;
+  color: var(--black);
   opacity: 0.55;
   text-transform: none;
   letter-spacing: 0;
@@ -294,8 +294,8 @@ section:not(.hero)::before{
 @media (max-width: 560px){ .grid-3, .grid-4{ grid-template-columns: 1fr; } }
 
 .card{
-  background: var(--white);
-  color: var(--green-dark);
+  background: #ffffff;
+  color: #143e22;
   border: 1px solid #e4ddcf;
   border-radius: 10px;
   padding: 18px;
@@ -306,12 +306,12 @@ section:not(.hero)::before{
 }
 .card img{ border-radius: 6px; margin-bottom: 14px; aspect-ratio: 4/5; object-fit: cover; }
 .card h3{ font-size: 1.05rem; margin-bottom: 4px; font-weight: 700; }
-.card .role{ font-weight: 600; margin-top: 2px; padding-top: 0; font-family: 'Montserrat',sans-serif; text-transform: none; font-size: 0.85rem; color: var(--green); opacity: 0.8; }
+.card .role{ font-weight: 600; margin-top: 2px; padding-top: 0; font-family: 'Montserrat',sans-serif; text-transform: none; font-size: 0.85rem; color: #143e22; opacity: 0.8; }
 .card .email{ font-size: 0.75rem; opacity: 0.8; word-break: break-word; margin-top: 6px; }
 
 .event-card, .news-card{
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid #143e22;
   border-radius: 8px;
   padding: 22px;
   overflow: hidden;
@@ -500,7 +500,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 @media (max-width: 900px){ .program-cols{ grid-template-columns: 1fr; } }
 .program-col{
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid #143e22;
   border-top: 3px solid var(--orange);
   border-radius: 8px;
   padding: 22px 22px 20px;
@@ -512,7 +512,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--orange);
+  color: #143e22;
   margin-bottom: 10px;
 }
 .program-col p{ font-size: 0.92rem; line-height: 1.55; color: var(--cream); margin-bottom: 16px; }
@@ -983,7 +983,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .final-cta .tagline{
   font-family: 'Montserrat', sans-serif; font-weight: 800;
   text-transform: uppercase;
-  color: var(--white);
+  color: #ffffff;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   margin-top: 30px;
 }
