@@ -55,13 +55,13 @@ img{ max-width: 100%; display: block; }
 .main-nav{ display: flex; align-items: center; gap: 28px; }
 .main-nav ul{ display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .main-nav a{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--white);
-  transition: color .15s;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 1.1rem;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--white);
+transition: color .15s;
 }
 .main-nav a:hover, .main-nav a.active{ color: var(--orange); }
 .dropdown{ position: relative; }
