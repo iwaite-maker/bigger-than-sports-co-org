@@ -125,7 +125,7 @@ img{ max-width: 100%; display: block; }
   background: var(--white);
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 83px);
   box-sizing: border-box;
   padding: 0;
 }
@@ -138,7 +138,7 @@ img{ max-width: 100%; display: block; }
   max-width: 640px;
   display: flex;
   align-items: center;
-  padding: 140px 56px 80px 64px;
+  padding: 32px 56px 32px 64px;
   box-sizing: border-box;
 }
 .hero-left-inner{ width: 100%; }
