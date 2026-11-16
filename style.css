@@ -996,6 +996,13 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   margin-top: 30px;
 }
+/* On phones, show the headline first and the Donate button last
+   (reversed from the desktop/tablet order above). Desktop/tablet
+   layout above this breakpoint is untouched. */
+@media (max-width: 700px){
+  .final-cta .final-cta-donate{ order: 2; margin-top: 20px; }
+  .final-cta .tagline{ order: 1; margin-top: 0; }
+}
 
 /* ---------- Editorial-note tag (visible marker for placeholder copy) ---------- */
 .editorial-note{
