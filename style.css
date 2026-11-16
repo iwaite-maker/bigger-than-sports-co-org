@@ -97,7 +97,7 @@ img{ max-width: 100%; display: block; }
   border: 2px solid var(--orange);
   transition: background .15s, color .15s;
 }
-.donate-btn:hover{ background: var(--orange); color: var(--black); }
+.donate-btn:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
 .nav-toggle{ display: none; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; }
 
 @media (max-width: 900px){
@@ -314,9 +314,10 @@ section:not(.hero)::before{
 .card .email{ font-size: 0.75rem; opacity: 0.8; word-break: break-word; margin-top: 6px; }
 
 .event-card, .news-card{
-  background: rgba(255,255,255,0.06);
-  border: 3px solid #143e22;
-  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e4ddcf;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(20,62,34,0.06);
   padding: 22px;
   overflow: hidden;
 }
@@ -1148,5 +1149,10 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   color: #143e22;
   border: 2px solid #143e22;
 }
-.btn:hover{ background: var(--orange-dark); color: #ffffff; border-color: var(--orange-dark); }
+.btn:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
 .confidence-donate-btn:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
+
+/* Buttons that sit directly on a white section background use the tan
+   outline (matching the header Donate button) instead of the green one. */
+.btn.btn-tan-outline{ border-color: var(--orange); }
+.btn.btn-tan-outline:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
