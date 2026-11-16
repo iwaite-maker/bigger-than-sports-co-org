@@ -505,17 +505,18 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 @media (max-width: 900px){ .program-cols{ grid-template-columns: 1fr; } }
 .program-col{
-  background: rgba(255,255,255,0.05);
-  border: 3px solid #143e22;
-  border-top: 3px solid var(--orange);
+  border: 3px solid transparent;
   border-radius: 8px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    conic-gradient(from 0deg, #c9a876 0deg, #c9a876 20deg, #143e22 90deg, #143e22 270deg, #c9a876 340deg, #c9a876 360deg) border-box;
   padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
 }
 .program-col h3{
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #143e22;
