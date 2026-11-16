@@ -299,15 +299,16 @@ section:not(.hero)::before{
 @media (max-width: 560px){ .grid-3, .grid-4{ grid-template-columns: 1fr; } }
 
 .card{
-  background: #ffffff;
   color: #143e22;
-  border: 1px solid #e4ddcf;
+  border: 2px solid transparent;
   border-radius: 10px;
-  padding: 18px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    conic-gradient(from 0deg, #c9a876 0deg, #c9a876 20deg, #143e22 90deg, #143e22 270deg, #c9a876 340deg, #c9a876 360deg) border-box;
+  padding: 19px;
   display: flex;
   flex-direction: column;
   min-height: auto;
-  box-shadow: 0 2px 8px rgba(20,62,34,0.06);
 }
 .card img{ border-radius: 6px; margin-bottom: 14px; aspect-ratio: 4/5; object-fit: cover; }
 .card h3{ font-size: 1.05rem; margin-bottom: 4px; font-weight: 700; }
@@ -315,11 +316,12 @@ section:not(.hero)::before{
 .card .email{ font-size: 0.75rem; opacity: 0.8; word-break: break-word; margin-top: 6px; }
 
 .event-card, .news-card{
-  background: #ffffff;
-  border: 1px solid #e4ddcf;
+  border: 2px solid transparent;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(20,62,34,0.06);
-  padding: 22px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    conic-gradient(from 0deg, #c9a876 0deg, #c9a876 20deg, #143e22 90deg, #143e22 270deg, #c9a876 340deg, #c9a876 360deg) border-box;
+  padding: 23px;
   overflow: hidden;
 }
 .event-card img, .news-card img{
@@ -507,12 +509,12 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 @media (max-width: 900px){ .program-cols{ grid-template-columns: 1fr; } }
 .program-col{
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-radius: 8px;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
     conic-gradient(from 0deg, #c9a876 0deg, #c9a876 20deg, #143e22 90deg, #143e22 270deg, #c9a876 340deg, #c9a876 360deg) border-box;
-  padding: 22px 22px 20px;
+  padding: 23px 23px 21px;
   display: flex;
   flex-direction: column;
 }
