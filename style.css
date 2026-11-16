@@ -982,14 +982,14 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .final-cta{
   text-align: center;
   width: 100%;
-  aspect-ratio: 2576 / 1094;
+  aspect-ratio: 2576 / 838;
   min-height: 220px;
-  max-height: 85vh;
+  max-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.78) 100%), url('final-cta-bg.jpg?v=20261115c') center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.78) 100%), url('final-cta-bg.jpg?v=20261115d') center/cover no-repeat;
   padding: 24px 24px;
 }
 .final-cta .tagline{
