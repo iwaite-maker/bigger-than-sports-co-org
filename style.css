@@ -167,7 +167,8 @@ img{ max-width: 100%; display: block; }
   .hero{ min-height: 0; }
   .hero-split{ flex-direction: column; min-height: 0; max-width: none; }
   .hero-left{ flex: 0 0 auto; max-width: none; padding: 48px 24px 40px; order: 1; }
-  .hero-right{ flex: 0 0 320px; order: 2; }
+  .hero-left-inner{ margin-top: 0; }
+  .hero-right{ flex: 0 0 auto; aspect-ratio: 1 / 1; order: 2; }
   .hero h1{ text-align: center; }
   .hero .sub{ font-size: clamp(1.1rem, 4vw, 1.5rem); margin-top: 16px; text-align: center; }
   .hero p.lede{ text-align: center; }
