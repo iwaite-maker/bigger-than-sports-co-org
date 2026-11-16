@@ -446,6 +446,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   inset: 0;
   background: linear-gradient(180deg, rgba(17,17,17,0.55), rgba(20,62,34,0.5));
 }
+.overlay-section.foundation .overlay-bg{ background-position: center top; }
 .overlay-section.foundation .overlay-bg::after{
   background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.40) 25%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.88) 100%);
 }
