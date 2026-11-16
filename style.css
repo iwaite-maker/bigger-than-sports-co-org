@@ -132,6 +132,10 @@ img{ max-width: 100%; display: block; }
 .hero-split{
   display: flex;
   align-items: stretch;
+  max-width: calc(720px + (100vh - 83px));
+  margin: 0 auto;
+  min-height: calc(100vh - 83px);
+  box-sizing: border-box;
 }
 .hero-left{
   flex: 1 1 54%;
@@ -161,7 +165,7 @@ img{ max-width: 100%; display: block; }
 .hero p.lede{ font-family: 'Montserrat', sans-serif; max-width: 700px; margin: 28px 0 0; font-size: 1.1rem; color: var(--black); text-align: left; }
 @media (max-width: 900px){
   .hero{ min-height: 0; }
-  .hero-split{ flex-direction: column; }
+  .hero-split{ flex-direction: column; min-height: 0; max-width: none; }
   .hero-left{ flex: 0 0 auto; max-width: none; padding: 48px 24px 40px; order: 1; }
   .hero-right{ flex: 0 0 320px; order: 2; }
   .hero h1{ text-align: center; }
@@ -501,18 +505,17 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 @media (max-width: 900px){ .program-cols{ grid-template-columns: 1fr; } }
 .program-col{
-  border: 3px solid transparent;
+  background: rgba(255,255,255,0.05);
+  border: 3px solid #143e22;
+  border-top: 3px solid var(--orange);
   border-radius: 8px;
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    conic-gradient(from 0deg, #c9a876 0deg, #c9a876 20deg, #143e22 90deg, #143e22 270deg, #c9a876 340deg, #c9a876 360deg) border-box;
   padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
 }
 .program-col h3{
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #143e22;
