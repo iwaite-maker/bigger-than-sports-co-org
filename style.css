@@ -1001,7 +1001,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
    layout above this breakpoint is untouched. */
 @media (max-width: 700px){
   .final-cta .final-cta-donate{ order: 2; margin-top: 20px; }
-  .final-cta .tagline{ order: 1; margin-top: 90px; font-size: 1.3rem; line-height: 1.3; }
+  .final-cta .tagline{ order: 1; margin-top: 90px; font-size: 1.125rem; line-height: 1.25; }
 }
 
 /* ---------- Editorial-note tag (visible marker for placeholder copy) ---------- */
