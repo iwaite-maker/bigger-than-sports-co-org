@@ -450,7 +450,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   text-align: center;
   color: var(--white);
 }
-.overlay-section.foundation{ color: #ffffff; }
+.overlay-section.foundation{ color: #ffffff; padding-top: 300px; padding-bottom: 90px; }
 .overlay-section.foundation .overlay-content p.statement-body{ color: #ffffff; }
 .overlay-section .overlay-bg{
   position: absolute;
