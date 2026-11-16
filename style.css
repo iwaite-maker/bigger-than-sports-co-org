@@ -1,13 +1,13 @@
 /* Bigger Than Sports — site styles */
 
 :root{
-  --green: #143e22;
-  --green-dark: #143e22;
+  --green: #ffffff;
+  --green-dark: #ffffff;
   --black: #111111;
   --orange: #c9a876;
   --orange-dark: #8a6a3f;
-  --cream: #ffffff;
-  --white: #ffffff;
+  --cream: #143e22;
+  --white: #143e22;
 }
 
 *{ box-sizing: border-box; }
@@ -122,7 +122,7 @@ img{ max-width: 100%; display: block; }
 
 /* ---------- Hero ---------- */
 .hero{
-  background: var(--white);
+  background: #ffffff;
   position: relative;
   overflow: hidden;
   min-height: calc(100vh - 83px);
@@ -158,7 +158,7 @@ img{ max-width: 100%; display: block; }
   object-fit: contain;
   object-position: bottom center;
 }
-.hero h1{ font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.15; color: var(--green); text-align: left; }
+.hero h1{ font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.15; color: #143e22; text-align: left; }
 .hero .sub{ font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; color: var(--orange); font-size: clamp(0.85rem, 1.5vw, 1rem); margin-top: 8px; text-align: left; }
 .hero p.lede{ font-family: 'Montserrat', sans-serif; max-width: 700px; margin: 28px 0 0; font-size: 1.1rem; color: var(--black); text-align: left; }
 @media (max-width: 900px){
@@ -253,7 +253,7 @@ section:not(.hero)::before{
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--black);
+  color: #ffffff;
   opacity: 0.6;
 }
 .board-name-wrap{
@@ -265,7 +265,7 @@ section:not(.hero)::before{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.78rem;
-  color: var(--black);
+  color: #ffffff;
   opacity: 0.55;
   text-transform: none;
   letter-spacing: 0;
@@ -407,7 +407,7 @@ blockquote cite{ display: block; margin-top: 14px; font-size: 0.95rem; opacity: 
 /* ---------- Footer ---------- */
 footer.site-footer{
   background: var(--black);
-  color: var(--cream);
+  color: #ffffff;
   padding: 50px 24px 30px;
   text-align: center;
   font-size: 0.9rem;
@@ -435,6 +435,8 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   text-align: center;
   color: var(--white);
 }
+.overlay-section.foundation{ color: #ffffff; }
+.overlay-section.foundation .overlay-content p.statement-body{ color: #ffffff; }
 .overlay-section .overlay-bg{
   position: absolute;
   inset: 0;
@@ -480,7 +482,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
     margin-top: 40px;
 }
 .zeffy-embed-card{
-    background: var(--white);
+    background: #ffffff;
     border: 1px solid rgba(20,62,34,0.12);
     border-radius: 14px;
     padding: 12px;
@@ -908,7 +910,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 
 
 /* ---------- Get Involved image buttons ---------- */
-.overlay-section.get-involved-section{ padding: 80px 24px; }
+.overlay-section.get-involved-section{ padding: 80px 24px; color: #ffffff; }
 .overlay-section.get-involved-section .overlay-bg::after{
   background: linear-gradient(180deg, rgba(17,17,17,0.80) 0%, rgba(17,17,17,0.55) 35%, rgba(17,17,17,0.55) 65%, rgba(17,17,17,0.85) 100%);
 }
@@ -950,7 +952,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   font-family: 'Montserrat', sans-serif; font-weight: 800;
   text-transform: uppercase;
   font-size: 1.1rem;
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* ---------- Board avatar (no photo) ---------- */
@@ -1005,7 +1007,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .confidence-section{
   position: relative;
   overflow: hidden;
-  color: var(--white);
+  color: #ffffff;
 }
 .confidence-bg{
   position: absolute;
@@ -1041,14 +1043,14 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 }
 .confidence-headline{
   font-size: clamp(2rem, 4.5vw, 3rem);
-  color: var(--white);
+  color: #ffffff;
   margin-bottom: 18px;
 }
 .confidence-body{
   font-family: 'Montserrat', sans-serif;
   text-transform: none;
   font-size: 1.05rem;
-  color: var(--cream);
+  color: #ffffff;
   max-width: 520px;
   margin-bottom: 10px;
   letter-spacing: normal;
@@ -1057,7 +1059,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: var(--cream);
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-bottom: 26px;
@@ -1136,3 +1138,13 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   }
   .event-gallery-btn{ padding: 9px 22px; font-size: 0.8rem; }
 }
+
+/* ---------- Color inversion: all CTA buttons are white background / green text ---------- */
+.btn,
+.confidence-donate-btn{
+  background: #ffffff;
+  color: #143e22;
+  border: 2px solid #143e22;
+}
+.btn:hover{ background: var(--orange-dark); color: #ffffff; border-color: var(--orange-dark); }
+.confidence-donate-btn:hover{ color: #ffffff; border-color: var(--orange-dark); }
