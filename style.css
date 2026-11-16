@@ -1162,6 +1162,11 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
 .btn:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
 .confidence-donate-btn:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
 
+/* ---------- Gold outline for the Donate Now button on the dark Give With Confidence photo background ---------- */
+.confidence-donate-btn{
+border-color: var(--orange);
+}
+
 /* Buttons that sit directly on a white section background use the tan
    outline (matching the header Donate button) instead of the green one. */
 .btn.btn-tan-outline{ border-color: var(--orange); }
