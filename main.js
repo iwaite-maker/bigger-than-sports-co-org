@@ -55,8 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
       var target = document.getElementById(hash.slice(1));
       if (!target) return;
       e.preventDefault();
-      var targetY = target.getBoundingClientRect().top + window.pageYOffset;
-      smoothScrollWindowTo(targetY, 700);
+      // Offset by the sticky header's current height so the target
+      // section's top isn't hidden underneath it after scrolling.
+      var header = document.querySelector('.site-header');
+      var headerOffset = header ? header.getBoundingClientRect().height : 0;
+      var targetY = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      smoothScrollWindowTo(Math.max(0, targetY), 700);
       if (history.pushState) history.pushState(null, '', hash);
     });
   });
