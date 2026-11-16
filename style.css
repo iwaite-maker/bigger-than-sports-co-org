@@ -351,60 +351,25 @@ section:not(.hero)::before{
   position: relative;
   overflow: hidden;
   background-color: #191819;
-  background-image: url('espy-photo-pattern-bg-v5.jpg?v=20261116a');
-  background-size: cover;
-  background-position: right center;
-  color: var(--white);
-  padding: 48px 24px;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
+  padding: 0;
 }
-.espy-inner{
+.espy-banner-wrap{
   position: relative;
-  z-index: 1;
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  line-height: 0;
 }
-.espy-content{ max-width: 520px; }
-.espy-media{ display: none; }
-@media (max-width: 800px){
-  .espy-section{
-    min-height: 0;
-    display: block;
-    background-image: none;
-    background-color: #191819;
-  }
-  .espy-content{ max-width: none; }
-  .espy-media{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 320px;
-    margin-bottom: 24px;
-    background-image: url('espy-mobile-v5.jpg?v=20261116a');
-    background-size: cover;
-    background-position: center 15%;
-  }
+.espy-banner-img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.espy-eyebrow{
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.9rem;
-  color: var(--orange);
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.espy-headline{
-  font-size: clamp(3.4rem, 9vw, 6rem);
-  line-height: 1.02;
-  margin-bottom: 20px;
-}
-.espy-body{
-  font-size: 1.05rem;
-  color: var(--cream);
-  max-width: 480px;
+.espy-banner-btn-link{
+  position: absolute;
+  left: 4.1%;
+  top: 76.8%;
+  width: 33.1%;
+  height: 11.6%;
+  display: block;
 }
 
 .trust-seal{ max-width: 160px; margin: 24px auto 0; }
