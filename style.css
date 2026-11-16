@@ -1181,3 +1181,26 @@ border-color: var(--orange);
    outline (matching the header Donate button) instead of the green one. */
 .btn.btn-tan-outline{ border-color: var(--orange); }
 .btn.btn-tan-outline:hover{ background: #143e22; color: #ffffff; border-color: #143e22; }
+
+/* ---------- Dark-background CTA buttons (Foundation + Give With Confidence):
+   green fill with gold outline by default, inverting to white fill / green text on hover ---------- */
+.confidence-donate-btn{
+background: #143e22;
+color: #ffffff;
+border-color: var(--orange);
+}
+.confidence-donate-btn:hover{
+background: #ffffff;
+color: #143e22;
+border-color: var(--orange);
+}
+.overlay-section.foundation .btn.btn-tan-outline{
+background: #143e22;
+color: #ffffff;
+border-color: var(--orange);
+}
+.overlay-section.foundation .btn.btn-tan-outline:hover{
+background: #ffffff;
+color: #143e22;
+border-color: var(--orange);
+}
