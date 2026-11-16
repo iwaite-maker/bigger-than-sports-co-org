@@ -138,7 +138,7 @@ img{ max-width: 100%; display: block; }
   max-width: 640px;
   display: flex;
   align-items: center;
-  padding: 20px 48px 20px 56px;
+  padding: 14px 48px 14px 56px;
   box-sizing: border-box;
 }
 .hero-left-inner{ width: 100%; }
@@ -147,8 +147,8 @@ img{ max-width: 100%; display: block; }
   background-size: cover;
   background-position: center;
 }
-.hero h1{ font-size: clamp(1.5rem, 2.5vw, 2.3rem); line-height: 1.15; color: var(--green); text-align: left; }
-.hero .sub{ font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; color: var(--orange-dark); font-size: clamp(0.9rem, 1.7vw, 1.15rem); margin-top: 10px; text-align: left; }
+.hero h1{ font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.15; color: var(--green); text-align: left; }
+.hero .sub{ font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; color: var(--orange-dark); font-size: clamp(0.85rem, 1.5vw, 1rem); margin-top: 8px; text-align: left; }
 .hero p.lede{ font-family: 'Montserrat', sans-serif; max-width: 700px; margin: 28px 0 0; font-size: 1.1rem; color: var(--black); text-align: left; }
 @media (max-width: 900px){
   .hero{ min-height: 0; }
@@ -457,7 +457,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   letter-spacing: normal;
 }
 .donation-widget{
-    margin-top: 12px;
+    margin-top: 8px;
 }
 .donation-widget .widget-tagline{
     font-family: 'Montserrat', sans-serif; font-weight: 800;
@@ -471,7 +471,7 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
     background: var(--white);
     border: 1px solid rgba(20,62,34,0.12);
     border-radius: 14px;
-    padding: 16px;
+    padding: 12px;
     max-width: 480px;
     margin: 0;
     box-shadow: 0 10px 28px rgba(20,62,34,0.12);
