@@ -120,6 +120,16 @@ transition: color .15s;
   .dropdown.open .dropdown-menu{ display: block; }
 }
 
+/* Anchor-link targets: offset so the sticky header never covers the
+   top of the section it scrolls to. Covers both the in-page smooth
+   scroll (main.js) and the browser's own native hash-scroll on page
+   load/reload, which main.js can't intercept. 120px comfortably
+   clears the sticky header at every screen width (header height
+   ranges ~95-119px depending on viewport). */
+section[id]{
+  scroll-margin-top: 120px;
+}
+
 /* ---------- Hero ---------- */
 .hero{
   background: #ffffff;
