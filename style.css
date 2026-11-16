@@ -51,7 +51,7 @@ img{ max-width: 100%; display: block; }
   margin: 0 auto;
 }
 .logo-link{ display: flex; align-items: center; gap: 10px; }
-.logo-link img{ width: 104px; height: 104px; border-radius: 50%; margin: -26px 0; }
+.logo-link img{ width: 52px; height: 52px; border-radius: 50%; }
 .main-nav{ display: flex; align-items: center; gap: 28px; }
 .main-nav ul{ display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .main-nav a{
