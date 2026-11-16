@@ -511,8 +511,8 @@ footer.site-footer .ein{ opacity: 0.6; margin-top: 10px; }
   flex-direction: column;
 }
 .program-col h3{
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #143e22;
