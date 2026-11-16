@@ -141,7 +141,7 @@ img{ max-width: 100%; display: block; }
   padding: 14px 48px 14px 56px;
   box-sizing: border-box;
 }
-.hero-left-inner{ width: 100%; }
+.hero-left-inner{ width: 100%; container-type: inline-size; }
 .hero-right{
   position: relative;
   flex: 1 1 46%;
@@ -156,7 +156,7 @@ img{ max-width: 100%; display: block; }
   object-fit: cover;
   object-position: bottom center;
 }
-.hero h1{ font-size: clamp(2rem, 1vw + 1.7rem, 2.75rem); line-height: 1.15; color: #143e22; text-align: left; }
+.hero h1{ font-size: clamp(1rem, 5.6cqw, 2.75rem); line-height: 1.15; color: #143e22; text-align: left; white-space: nowrap; }
 .hero .sub{ font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; color: var(--orange); font-size: clamp(1.05rem, 0.4vw + 0.95rem, 1.25rem); margin-top: 10px; text-align: left; }
 .hero p.lede{ font-family: 'Montserrat', sans-serif; max-width: 700px; margin: 28px 0 0; font-size: 1.1rem; color: var(--black); text-align: left; }
 @media (max-width: 900px){
@@ -164,7 +164,7 @@ img{ max-width: 100%; display: block; }
   .hero-split{ flex-direction: column; }
   .hero-left{ flex: 0 0 auto; max-width: none; padding: 48px 24px 40px; order: 1; }
   .hero-right{ flex: 0 0 320px; order: 2; }
-  .hero h1{ font-size: clamp(2rem, 6vw, 2.8rem); text-align: center; }
+  .hero h1{ text-align: center; }
   .hero .sub{ font-size: clamp(1.1rem, 4vw, 1.5rem); margin-top: 16px; text-align: center; }
   .hero p.lede{ text-align: center; }
   .hero .zeffy-embed-card{ margin: 0 auto; }
